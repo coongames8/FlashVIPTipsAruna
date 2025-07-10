@@ -11,7 +11,7 @@ export const pricings = [
     plan: "Daily",
     billing: "Day",
     title: "Full access to daily predictions",
-    price: 500,
+    price: 200,
     features: [
       "Daily match predictions",
       "Fixed Correct Score",
@@ -24,7 +24,7 @@ export const pricings = [
     plan: "Weekly",
     billing: "Week",
     title: "Exclusive weekly access to expert tips",
-    price: 1400,
+    price: 750,
     features: [
       "20+ odds daily",
       "7 Days Tips",
@@ -37,7 +37,7 @@ export const pricings = [
     plan: "Monthly",
     billing: "Month",
     title: "Comprehensive predictions for dedicated fans",
-    price: 3500,
+    price: 1600,
     features: [
       "20+ odds per day",
       "Priority Customer Support",
@@ -115,11 +115,11 @@ export const featured = [
 ]
 
 export const socialUrls = [
-  { id: 1, icon: <IoLogoFacebook />, url: "https://www.facebook.com/profile.php?id=699140333272591", title: "Facebook" },
-  { id: 2, icon: <FaTelegram />, url: "https://t.me/bet365gurus", title: "Telegram" },
-  { id: 3, icon: <IoLogoWhatsapp />, url: "https://whatsapp.com/channel/0029VayjRf71t90afonqcy0b", title: "WhatsApp" },
-  { id: 4, icon: <PiXLogo />, url: "https://x.com/goalgeniusvip", title: "X(Twitter)" },
-  { id: 5, icon: <IoLogoInstagram />, url: "https://instagram.com/goalgenius.vip", title: "Instagram" },
+  { id: 1, icon: <IoLogoFacebook />, url: "https://www.facebook.com/profile.php?id=61578326485123&mibextid=ZbWKwL", title: "Facebook" },
+  { id: 2, icon: <FaTelegram />, url: "https://t.me/victorypickske", title: "Telegram" },
+  { id: 3, icon: <IoLogoWhatsapp />, url: "https://whatsapp.com/channel/0029VbAzC5EA89Mi4nOZRu0n", title: "WhatsApp" },
+  { id: 4, icon: <PiXLogo />, url: "https://x.com/victorypicks_ke", title: "X(Twitter)" },
+  { id: 5, icon: <IoLogoInstagram />, url: "https://instagram.com/victorypicks_ke", title: "Instagram" },
 ];
 
 export const slides = [
