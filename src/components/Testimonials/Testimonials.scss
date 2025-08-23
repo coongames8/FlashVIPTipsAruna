@@ -20,13 +20,13 @@
             width: 1px;
             display: none;
         }
-          
+
         &::-webkit-scrollbar-track{
             display: none;
         }
-          
+
         &::-webkit-scrollbar-thumb{
-            background: var(--dark-blue);
+            background: var(--primary-dark);
             border-radius: 2px;
           }
 
@@ -41,7 +41,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; 
+            justify-content: center;
 
             justify-content: space-between;
 
@@ -62,7 +62,7 @@
                 }
             }
 
-            
+
 
             .content{
                 width: 100%;
@@ -70,7 +70,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content:space-evenly;
-                
+
 
                 h1{
                     width: 100%;

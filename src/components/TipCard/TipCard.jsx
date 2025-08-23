@@ -28,52 +28,67 @@ export default function TipCard({ tip, isAdmin, today }) {
     }, [isPremiumUser, isAdmin, tip]);
 
     function getTipStatus(tip) {
-        if (tip.status === "pending") {
-            return (
-                <span className="pending">
-                    pend🔄
-                </span>
-            );
-        } else if (tip.won === "won") {
-            return (
-                <span className="won">
-                    won✅
-                </span>
-            );
-        } else {
-            return (
-                <span className="lost">
-                    lost❌
-                </span>
-            );
-        }
-    }
+			if (tip.status === "pending") {
+				return (
+					<span className="pending">{tip.results ? tip.results : "?-?"}🔄</span>
+				);
+			} else if (tip.won === "won") {
+				return (
+					<span className="won">{tip.results ? tip.results : "?-?"}✅</span>
+				);
+			} else {
+				return (
+					<span className="lost">{tip.results ? tip.results : "?-?"}❌</span>
+				);
+			}
+		}
 
+		return (
+			<div
+				className="tip-card"
+				style={{
+					borderLeft: tip.premium ? "2px solid gold" : "2px solid silver",
+				}}
+			>
+				<div className="top">
+					<p
+						style={{
+							backgroundColor: tip.premium ? "gold" : "silver",
+							padding: "3px",
+						}}
+					>
+						⏱{tip.time}
+					</p>
+					{isAdmin && (
+						<NavLink to={"/edit-tip"} state={tip}>
+							<BiEdit />
+						</NavLink>
+					)}
+					<p className="results">{getTipStatus(tip)}</p>
+					{
+						<p
+							className="tag"
+							style={{
+								backgroundColor: tip.premium ? "gold" : "silver",
+							}}
+						>
+							odd: {tip.odd}
+						</p>
+					}
+				</div>
 
-    return (
-        <div className="tip-card" style={{ borderLeft: tip.premium ? "2px solid gold" : "2px solid silver" }}>
-            <div className="top">
-                <p style={{
-                    backgroundColor: tip.premium ? "gold" : "silver",
-                    padding: '3px',
-                }}>odd: {tip.odd}</p>
-                {isAdmin && <NavLink to={"/edit-tip"} state={tip}><BiEdit /></NavLink>}
-                {<div className="tag" style={{ backgroundColor: tip.premium ? "gold" : "white" }}>{tip.premium ? "💎" : "🔓"}</div>}
-            </div>
-
-            <div className="center">
-                <div className='info time-card'>
-                    <p>{tip.time}</p>
-                </div>
-                <div className="teams">
-                    <p className={`name ${hidden && "hidden"}`}>{!hidden ? `${truncateTitle(tip.home, 60)}` : "CLOSED"}</p>
-                    <div className="results">{tip.pick}</div>
-                    <p className={`name ${hidden && "hidden"}`} > {!hidden ? `${truncateTitle(tip.away, 60)}` : "CLOSED"}</p>
-                </div>
-                <div className='info'>
-                    <p>{tip.results ? tip.results : "?-?"}</p>
-                    <p>{getTipStatus(tip)}</p>
-                </div>
-            </div>
-        </div>)
+				<div className="center">
+					<div className="teams">
+						<p className={`name ${hidden && "hidden"}`}>
+							{!hidden ? `${truncateTitle(tip.home, 60)}` : "CLOSED"}
+						</p>
+						<div className="results">{tip.pick}</div>
+						<p className={`name ${hidden && "hidden"}`}>
+							{" "}
+							{!hidden ? `${truncateTitle(tip.away, 60)}` : "CLOSED"}
+						</p>
+					</div>
+				</div>
+			</div>
+		);
 }

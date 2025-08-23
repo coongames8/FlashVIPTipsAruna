@@ -45,23 +45,23 @@ export default function Subscription() {
   };
 
   const componentProps = {
-    reference: (new Date()).getTime().toString(),
-    email: user ? user.email : "coongames8@gmail.com",
-    amount: (data && data.price * 100) || (subscription.price * 100),
-    publicKey: 'pk_live_3536854dd4b68716f9d7515d748772e701c04832',
-    currency: "KES",
-    metadata: {
-      name: user ? user.email : "coongames8@gmail.com",
-    },
-    text: 'PAY NOW',
-    onSuccess: (response) => {
-      handleUpgrade();
-    },
-    onClose: () => {
-      //console.log('Payment dialog closed');
-      // Handle payment closure here
-    },
-  };
+		reference: new Date().getTime().toString(),
+		email: user ? user.email : "coongames8@gmail.com",
+		amount: (data && data.price * 100) || subscription.price * 100,
+		publicKey: "pk_live_71bc9718fd9b78e12c120101e663c27d9fc7b1cf",
+		currency: "KES",
+		metadata: {
+			name: user ? user.email : "coongames8@gmail.com",
+		},
+		text: "PAY NOW",
+		onSuccess: (response) => {
+			handleUpgrade();
+		},
+		onClose: () => {
+			//console.log('Payment dialog closed');
+			// Handle payment closure here
+		},
+	};
 
   return (
     <div className='pay'>

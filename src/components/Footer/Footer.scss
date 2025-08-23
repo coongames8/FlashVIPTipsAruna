@@ -62,12 +62,12 @@
                     padding: 10px;
                     cursor: pointer;
                     text-decoration: none;
-                    color: var(--blue);
+                    color: var(--primary);
                     &:hover{
                         text-decoration: underline;
                     }
                     &:visited{
-                        color: var(--dark-blue);
+                        color: var(--primary-dark);
                     }
 
                 }

@@ -10,7 +10,7 @@
     h4{
       text-align: center;
     }
-    
+
     form.method{
         width: 100%;
         max-width: 800px;
@@ -47,7 +47,7 @@
                 }
               }
 
-            
+
               input[type="radio"]{
                 visibility: hidden;
                 position: absolute;
@@ -55,16 +55,16 @@
               }
               input[type="radio"]:checked{
                 ~ label{
-                  background: var(--dark-blue);
+                  background: var(--primary-dark);
                   color: var(--lite);
                   box-shadow: 0 0.2em 0.45em 0.1em rgba(0,0,0, 0.4);
                   transform: scale(1.05);
                   animation: checked 200ms 1;
-                  border: 1px solid var(--dark-blue);
+                  border: 1px solid var(--primary-dark);
                   position: relative;
                   z-index: 5;
                 }
-              } 
+              }
         }
     }
 }

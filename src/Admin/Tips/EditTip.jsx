@@ -17,15 +17,10 @@ export default function EditTip() {
     const [time, setTime] = useState('');
     const [won, setWon] = useState('');
     const [premium, setPremium] = useState(false);
-    const [gamesType, setGamesType] = useState("1X2");
     const [results, setResults] = useState('');
     const [loading, setLoading] = useState(false);
     const setNotification = useSetRecoilState(notificationState);
     const [data, setData] = useState(null);
-
-    const handleChange = (event) => {
-        setGamesType(event.target.value);
-    };
 
 
     const location = useLocation();
@@ -48,7 +43,7 @@ export default function EditTip() {
             hour12: false,
         });
 
-        updateTip(data.id, { home, away, odd, pick, status, won, premium, type: gamesType, results, date, time: timeOnly }, setNotification, setLoading, setData);
+        updateTip(data.id, { home, away, odd, pick, status, won, premium, results, date, time: timeOnly }, setNotification, setLoading, setData);
     }
 
     // Assuming `date` is "12/5/2024" and `time` is "22:00"
@@ -76,7 +71,6 @@ export default function EditTip() {
             setResults(data.results)
             setWon(data.won);
             setPremium(data.premium);
-            setGamesType(data.type);
 
             // Format and set time for datetime-local
             const datetimeLocal = formatDateTimeForInput(data.date, data.time);
@@ -126,15 +120,6 @@ export default function EditTip() {
                     <label htmlFor="premium">Is premium</label>
                     <input type="checkbox" placeholder='premium' id='premium' onChange={(e) => setPremium(e.target.checked)} checked={premium} />
                 </div>
-                <div className="input-container">
-                    <label>Select Type:</label>
-                    <label><input type="radio" name="games-type" value={"1X2"} id="1X2" checked={gamesType === "1X2"} onChange={handleChange} />WDW (1X2)</label>
-                    <label><input type="radio" name="games-type" value={"CS"} id="CS" checked={gamesType === "CS"} onChange={handleChange} />Goals (CS)</label>
-                    <label><input type="radio" name="games-type" value={"GG"} id="GG" checked={gamesType === "GG"} onChange={handleChange} />BTTS (GG/NG)</label>
-                    <label><input type="radio" name="games-type" value={"OV_UN"} id="OV_UN" checked={gamesType === "OV_UN"} onChange={handleChange} />TOTAL (OV/UN)</label>
-                    <label><input type="radio" name="games-type" value={"DC"} id="DC" checked={gamesType === "DC"} onChange={handleChange} />DC 1X2</label>
-                </div>
-
                 <span style={{
                     width: "100%",
                     display: "flex",

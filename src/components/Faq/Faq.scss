@@ -21,29 +21,29 @@
         outline: none;
         &:hover, &:focus {
           cursor: pointer;
-          color: var(--blue);
+          color: var(--primary);
           &::after {
             cursor: pointer;
-            color: var(--blue);
-            border: 1px solid var(--blue);
+            color: var(--primary);
+            border: 1px solid var(--primary);
           }
         }
-    
+
         &:hover, &:focus {
           cursor: pointer;
-          color: var(--blue);
+          color: var(--primary);
           filter: brightness(90%); /* Darkens by 10% */
           &::after{
-            color: var(--blue);
+            color: var(--primary);
             filter: brightness(90%); /* Darkens by 10% */
-            border: 1px solid var(--dark-blue);
+            border: 1px solid var(--primary-dark);
           }
         }
-        
+
         .accordion-title {
           padding: 1em 1.5em 1em 0;
         }
-    
+
         .icon {
           display: inline-block;
           position: absolute;
@@ -74,44 +74,44 @@
               background: currentColor;
             }
         }
-    
+
         .icon {
           transition: transform 200ms ease-in-out;
-        
+
           &::after {
             transition: transform 200ms ease-in-out;
           }
         }
-        
+
         &[aria-expanded=true] .icon {
           transform: rotate(45deg);
         }
       }
-    
+
       .accordion-content {
         opacity: 0;
         max-height: 0;
         overflow: hidden;
         //transition: opacity 200ms linear, max-height 200ms linear;
         transition: max-height 300ms ease-in-out, opacity 300ms ease-in-out;
-    
+
         will-change: opacity, max-height;
         p{
           margin: 1em 0;
         }
-    
+
         background: linear-gradient(to bottom, var(--transparent), var(--lite),  var(--transparent),  var(--light-blue));
       }
-      
+
       &[aria-expanded=true]{
         button {
-          color: var(--blue);
-          border-bottom: 1px solid var(--blue);
+          color: var(--primary);
+          border-bottom: 1px solid var(--primary);
           .icon::after{
             width: 0;
           }
         }
-    
+
         .accordion-content {
           opacity: 1;
           max-height: max-content; /* Adjust as needed */
@@ -120,8 +120,8 @@
           will-change: opacity, max-height;
         }
       }
-      
-          
+
+
       button[aria-expanded=true] + .accordion-content {
         opacity: 1;
         max-height: max-content;

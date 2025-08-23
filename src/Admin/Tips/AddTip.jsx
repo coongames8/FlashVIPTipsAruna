@@ -20,20 +20,6 @@ export default function AddTip() {
     const [loading, setLoading] = useState(false);
     const setNotification = useSetRecoilState(notificationState);
 
-    const [gamesType, setGamesType] = useState("1X2");
-
-    const handleChange = (event) => {
-        setGamesType(event.target.value);
-    };
-
-
-    /*const handleSubmit = (e) => {
-        e.preventDefault()
-        const d = new Date(time)
-        let date = d.toLocaleString().split(',')[0]
-        addTip({home, away, date, odd, pick, status, time:time.split("T")[1], won, premium, results, type: gamesType}, setNotification, setLoading);
-    }*/
-
     const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -59,8 +45,7 @@ export default function AddTip() {
         time: timeOnly,
         won,
         premium,
-        results,
-        type: gamesType
+        results
     }, setNotification, setLoading);
 };
 
@@ -106,14 +91,6 @@ export default function AddTip() {
             <div className="input-container">
                 <label htmlFor="premium">Is premium</label>
                 <input type="checkbox" placeholder='premium' id='premium' onChange={(e) => setPremium(e.target.checked)} checked={premium}/>
-            </div>
-            <div className="input-container">
-                <label>Select Type:</label>
-                <label><input type="radio" name="games-type" value={"1X2"} id="1X2" checked={gamesType === "1X2"} onChange={handleChange}/>WDW (1X2)</label>
-                <label><input type="radio" name="games-type" value={"CS"} id="CS" checked={gamesType === "CS"} onChange={handleChange}/>Goals (CS)</label>
-                <label><input type="radio" name="games-type" value={"GG"} id="GG" checked={gamesType === "GG"} onChange={handleChange}/>BTTS (GG/NG)</label>
-                <label><input type="radio" name="games-type" value={"OV_UN"} id="OV_UN" checked={gamesType === "OV_UN"} onChange={handleChange}/>TOTAL (OV/UN)</label>
-                <label><input type="radio" name="games-type" value={"DC"} id="DC" checked={gamesType === "DC"} onChange={handleChange}/>DC 1X2</label>
             </div>
             <button type="submit" className='btn' title='Submit' aria-label="add">Add</button>
         </form>}

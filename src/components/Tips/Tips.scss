@@ -38,7 +38,7 @@
                 white-space: nowrap;
                 background: var(--light-blue);
                 padding: 0px 10px;
-                border: 1px solid var(--light-grey);
+                border: 1px solid var(--grey);
                 border-radius: 3px;
                 cursor: pointer;
                 display: flex;
@@ -48,7 +48,7 @@
                 transition: all 0.5s ease;
 
                 &.active {
-                    background: var(--dark-blue);
+                    background: var(--primary-dark);
                     color: var(--lite);
                 }
             }
@@ -117,16 +117,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: var(--dark-blue);
+        /* Replace the solid color with a gradient */
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
         color: var(--lite);
         padding: 5px 5px;
         border-radius: 5px;
         text-decoration: none;
         margin: 10px 10px;
         margin-left: auto;
+        /* Optional: Add a smooth transition for the hover effect */
+        transition: background 0.3s ease;
 
         &:hover {
-            background: var(--blue);
+            /* You can change the gradient on hover for a nice effect */
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
         }
     }
 
@@ -135,7 +139,7 @@
         max-width: 800px;
         display: grid;
         grid-gap: 1rem;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding: 0 5px;
 
         fieldset {
@@ -174,12 +178,12 @@
 
             input[type="radio"]:checked {
                 ~label {
-                    background: var(--dark-blue);
+                    background: var(--primary-dark);
                     color: var(--lite);
                     box-shadow: var(--dark-shadow);
                     transform: scale(1.02);
                     animation: checked 200ms 1;
-                    border: 1px solid var(--dark-blue);
+                    border: 1px solid var(--primary-dark);
                     position: relative;
                     z-index: 5;
                 }
