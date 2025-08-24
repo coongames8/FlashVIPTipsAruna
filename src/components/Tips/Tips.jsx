@@ -26,6 +26,8 @@ export default function Tips() {
 	const [gamesType, setGamesType] = useState(true);
 	const [tips, setTips] = useState(null);
 
+	const location = useLocation();
+
 	const tabBoxRef = useRef();
 
 	const handleIcons = () => {
