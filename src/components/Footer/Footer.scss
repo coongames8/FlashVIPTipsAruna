@@ -9,6 +9,7 @@
     background: linear-gradient(to bottom, var(--light-blue), var(--lite));
     background: linear-gradient(to bottom, var(--light-blue),var(--transparent), var(--lite));
     position: relative;
+    margin-top: 20px;
     .social{
         width: 100%;
         display: flex;
@@ -40,7 +41,8 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        flex-wrap: wrap;
+        //flex-wrap: wrap;
+        gap: 10px;
 
         section{
             width: calc((100% - 100px) / 3);
