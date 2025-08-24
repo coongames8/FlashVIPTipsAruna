@@ -40,18 +40,16 @@
         padding: 5px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         //flex-wrap: wrap;
         gap: 10px;
 
         section{
             width: calc((100% - 30px) / 2);
-            min-height: 180px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
-            min-width: 300px;
 
             .items-container{
                 width: 100%;
