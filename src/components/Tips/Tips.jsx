@@ -194,7 +194,7 @@ export default function Tips() {
 					/>
 				</div>
 			</div>
-			<NavLink to="#pricing" className={"subscribe-btn"}>
+			<NavLink className={"subscribe-btn"} state={{ from: location, subscription: pricings[0] }} to={"/subscribe"}>
 				SUBSCRIBE TO VIEW VIP TIPS
 			</NavLink>
 			<form className="type">
