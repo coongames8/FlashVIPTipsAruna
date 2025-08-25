@@ -1,7 +1,7 @@
 {
-	"short_name": "Goal Kings",
-	"name": "Goal Kings",
-	"homepage": "https://goalkings.com/",
+	"short_name": "FLASH TIPS",
+	"name": "FLASH TIPS",
+	"homepage": "https://flashviptips.onrender.com/",
 	"version": "0.1.0",
 	"description": "Ready to make smarter predictions? Join us and get expert VIP tips, accurate match predictions, live scores, and the latest betting odds. Stay updated with fixtures and results from top leagues worldwide",
 	"icons": [
@@ -107,8 +107,8 @@
 		"type": "classic"
 	},
 	"developer": {
-		"name": "Goal Kings",
-		"url": "https://goalkings.com/"
+		"name": "FLASH TIPS",
+		"url": "https://flashviptips.onrender.com/"
 	},
 	"repository": {
 		"type": "git",

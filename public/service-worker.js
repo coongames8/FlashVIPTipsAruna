@@ -94,5 +94,5 @@ self.addEventListener('push', (event) => {
         icon: '/logo512.png',
         badge: '/logo128.png'
     };
-    event.waitUntil(self.registration.showNotification("Goal Kings", options));
+    event.waitUntil(self.registration.showNotification("FLASH TIPS", options));
 });

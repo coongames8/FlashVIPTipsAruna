@@ -27,7 +27,7 @@ export default function AppHelmet({ title }) {
 				name="keywords"
 				content="Football Predictions, Betting Odds, Live Scores, Live Sports, Football Results, Football Fixtures, Football Today, Premier League, Championship, Super Sports, Laliga, Bundesliga, Serie A"
 			/>
-			<meta name="author" content="Goal Kings" />
+			<meta name="author" content="FLASH TIPS" />
 			<link rel="canonical" href={canonicalUrl} />
 
 			{/* Open Graph tags for social media */}

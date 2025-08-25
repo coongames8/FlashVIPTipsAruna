@@ -11,7 +11,7 @@ const Footer = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if (user && ['kkibetkkoir@gmail.com', 'charleykibet254@gmail.com', 'coongames8@gmail.com'].includes(user.email)) {
+        if (user && ['kkibetkkoir@gmail.com', 'charleykibet254@gmail.com', 'kipkiruik1@gmail.com'].includes(user.email)) {
             setIsAdmin(true);
         } else {
             setIsAdmin(false);
@@ -39,9 +39,9 @@ const Footer = () => {
 
 				<div className="section-wrapper theme">
 					<section>
-						<h2>Goal Kings</h2>
+						<h2>FLASH TIPS</h2>
 						<div className="items-container theme">
-							<NavLink to="/" title="Goal Kings" state={{ from: location }}>
+							<NavLink to="/" title="FLASH TIPS" state={{ from: location }}>
 								Home
 							</NavLink>
 							<NavLink to="/login" title="login" state={{ from: location }}>
@@ -82,7 +82,7 @@ const Footer = () => {
 				</div>
 				<hr />
 				<div className="footer-bottom theme">
-					<p>&copy; Goal Kings {new Date().getFullYear()}</p>
+					<p>&copy; FLASH TIPS {new Date().getFullYear()}</p>
 					<NavLink to="/about/#faq" title="help" state={{ from: location }}>
 						FAQ
 					</NavLink>

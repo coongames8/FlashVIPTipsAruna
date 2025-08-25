@@ -46,12 +46,12 @@ export default function Subscription() {
 
   const componentProps = {
 		reference: new Date().getTime().toString(),
-		email: user ? user.email : "coongames8@gmail.com",
+		email: user ? user.email : "kipkiruik1@gmail.com",
 		amount: (data && data.price * 100) || subscription.price * 100,
-		publicKey: "pk_live_71bc9718fd9b78e12c120101e663c27d9fc7b1cf",
+		publicKey: "pk_test_ee49d53d05bb42482654b32759ff10c7de105fb6",
 		currency: "KES",
 		metadata: {
-			name: user ? user.email : "coongames8@gmail.com",
+			name: user ? user.email : "kipkiruik1@gmail.com",
 		},
 		text: "PAY NOW",
 		onSuccess: (response) => {

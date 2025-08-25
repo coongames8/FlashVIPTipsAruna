@@ -144,7 +144,7 @@ export default function Tips() {
 			[
 				"kkibetkkoir@gmail.com",
 				"charleykibet254@gmail.com",
-				"coongames8@gmail.com",
+				"kipkiruik1@gmail.com",
 			].includes(user.email)
 		) {
 			setAdmin(true);

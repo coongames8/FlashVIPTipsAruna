@@ -1,9 +1,9 @@
 {
-	"name": "goalkings",
+	"name": "flashviptips",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
-	"homepage": "https://goalkings.com/",
+	"homepage": "https://flashviptips.onrender.com/",
 	"proxy": "*",
 	"scripts": {
 		"dev": "vite",

@@ -133,7 +133,7 @@ export const socialUrls = [
 	{
 		id: 2,
 		icon: <FaTelegram />,
-		url: "https://t.me/goalkings_ke",
+		url: "https://t.me/flashviptips_ke",
 		title: "Telegram",
 	},
 	{
@@ -145,13 +145,13 @@ export const socialUrls = [
 	{
 		id: 4,
 		icon: <PiXLogo />,
-		url: "https://x.com/goalkings_ke",
+		url: "https://x.com/flashviptips_ke",
 		title: "X(Twitter)",
 	},
 	{
 		id: 5,
 		icon: <IoLogoInstagram />,
-		url: "https://instagram.com/goalkings_ke",
+		url: "https://instagram.com/flashviptips_ke",
 		title: "Instagram",
 	},
 ];
